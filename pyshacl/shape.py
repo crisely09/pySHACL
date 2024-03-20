@@ -464,7 +464,7 @@ class Shape(object):
                 self.logger.debug(f"Running evaluation of Shape {str(self)}")
         if _evaluation_path is None:
             _evaluation_path = []
-        elif len(_evaluation_path) >= 30:
+        elif len(_evaluation_path) >= 100:
             # 27 is the depth required to successfully do the meta-shacl test on shacl.ttl
             path_str = " -> ".join((str(e) for e in _evaluation_path))
             raise ReportableRuntimeError("Evaluation path too deep!\n{}".format(path_str))
